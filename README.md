@@ -17,11 +17,7 @@
 ## 📂 Структура проекта
 
 ```
-UltraObjectHandler/
-│── UltraObjectHandler.cpp   # Основной файл с логикой работы
-│── objects.txt             # Файл с объектами
-│── CMakeLists.txt          # Файл сборки CMake
-│── README.md               # Документация проекта
+UltraObjectHandler/ │── src/ # Исходные файлы │ ├── main.cpp # Основной файл запуска │ ├── Object.h/.cpp # Класс объекта │ ├── FileManager.h/.cpp # Работа с файлами │ ├── Sorting.h/.cpp # Алгоритмы сортировки │ ├── Grouping.h/.cpp # Алгоритмы группировки │── data/ # Файлы с тестовыми данными │ ├── objects.txt # Файл с объектами │── CMakeLists.txt # Файл сборки CMake │── README.md
 ```
 
 ---
