@@ -17,7 +17,18 @@
 ## 📂 Структура проекта
 
 ```
-UltraObjectHandler/ │── src/ # Исходные файлы │ ├── main.cpp # Основной файл запуска │ ├── Object.h/.cpp # Класс объекта │ ├── FileManager.h/.cpp # Работа с файлами │ ├── Sorting.h/.cpp # Алгоритмы сортировки │ ├── Grouping.h/.cpp # Алгоритмы группировки │── data/ # Файлы с тестовыми данными │ ├── objects.txt # Файл с объектами │── CMakeLists.txt # Файл сборки CMake │── README.md
+UltraObjectHandler/
+│── src/                    # Исходные файлы
+│   ├── Controller/         # Управляющий контроллер
+│   ├── DataManager/        # Работа с файлами
+│   ├── Menu/               # Главное меню
+│   ├── Object/             # Класс объекта
+│── resources/
+    │──data/
+       ├── objects.txt      # Тестовые данные
+├── main.cpp                # Основной файл запуска   
+│── CMakeLists.txt          # Файл сборки CMake
+│── README.md               # Документация проекта
 ```
 
 ---
@@ -39,7 +50,7 @@ make
 
 ### 🔹 3. Запуск
 ```sh
-./UltraObjectHandler
+./bin/UltraObjectHandler
 ```
 
 ---
@@ -94,10 +105,6 @@ NPC 5.0 7.8 Dynamic 1700003000.789
 🔹 **Сортировка объектов**:
 - `sortByName(objects)` — по имени
 - `sortByCoordinate(objects)` — по координатам
-
-🔹 **Файловый менеджер**:
-- `loadObjectsFromFile(filename)` — чтение данных из файла
-- `writeObjectsToFile(filename, objects)` — запись в файл
 
 ---
 
