@@ -13,7 +13,7 @@ int Menu::MainMenu::safeMenuInput()
 
     while (true)
     {
-        if (std::cin >> value && value >= 1 && value <= 5)
+        if (std::cin >> value && value >= 1 && value <= 4)
         {
             return value;
         }
@@ -27,11 +27,11 @@ void Menu::MainMenu::startMenu()
 {
     while (true)
     {
-        std::cout << "Welcome to object reader\nSelect an action\n\n";
+        std::cout << "Welcome to object reader\nВыберите действие\n\n";
 
-        std::cout
-            << "[1] Read a list of objects from a file\n[2] Add object to list\n[3] Group current objects\n[4] Save "
-               "results to file\n[5] Exit\n->";
+        std::cout << "[1] Прочитать список объектов из файла\n[2] Добавить объект в список\n[3] Группировка "
+                     "объектов\n[4] Выход"
+                     "\n->";
 
         int option = safeMenuInput();
 
@@ -46,7 +46,6 @@ void Menu::MainMenu::startMenu()
 
         case 2:
             system("cls");
-            // add new object
             Controllers::MainController::getInstance()->addingObjectsToList();
             system("pause");
             system("cls");
@@ -54,21 +53,12 @@ void Menu::MainMenu::startMenu()
 
         case 3:
             system("cls");
-            // grouping objects
             Controllers::MainController::getInstance()->groupingObjects();
             system("pause");
             system("cls");
             break;
 
         case 4:
-            system("cls");
-            Controllers::MainController::getInstance()->saveResultsToFile();
-            // save results to file
-            system("pause");
-            system("cls");
-            break;
-
-        case 5:
             system("cls");
             std::exit(0);
             break;

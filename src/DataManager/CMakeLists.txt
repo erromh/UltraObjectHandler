@@ -4,4 +4,4 @@ add_library(DataManager ${MANAGER_SOURCES})
 
 target_include_directories(DataManager PUBLIC ${CMAKE_SOURCE_DIR}/src/DataManager)
 
-target_link_libraries(DataManager PUBLIC SQLiteInterface controller)
+target_link_libraries(DataManager PUBLIC controller Object)
